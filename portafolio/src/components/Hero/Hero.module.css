@@ -1,0 +1,312 @@
+/* Hero Component Styles */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 6rem 2rem 3rem;
+  overflow: visible;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+
+.content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Greeting */
+.greeting {
+  margin-bottom: 1rem;
+}
+
+.greetingText {
+  color: var(--accent-blue);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Name */
+.name {
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.nameText {
+  display: inline-block;
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.nameHighlight {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* Tagline */
+.tagline {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.taglineAccent {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Description */
+.description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA Container */
+.ctaContainer {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Primary CTA Button */
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  color: var(--bg-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.ctaButton:hover::before {
+  left: 100%;
+}
+
+.ctaButton:hover {
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
+}
+
+.ctaButton:active {
+  transform: scale(0.98);
+}
+
+/* Secondary CTA Button */
+.ctaButtonSecondary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--glass-bg);
+  color: var(--accent-blue);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButtonSecondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  transition: width var(--transition-normal);
+  z-index: -1;
+}
+
+.ctaButtonSecondary:hover {
+  color: var(--bg-primary);
+  border-color: var(--accent-blue);
+}
+
+.ctaButtonSecondary:hover::before {
+  width: 100%;
+}
+
+.ctaButtonSecondary:active {
+  transform: scale(0.98);
+}
+
+/* Background Elements */
+.backgroundElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 1;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.glowCircle1,
+.glowCircle2,
+.glowCircle3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite;
+}
+
+.glowCircle1 {
+  width: 600px;
+  height: 600px;
+  background: var(--accent-blue);
+  top: 10%;
+  right: 0%;
+  animation-delay: 0s;
+}
+
+.glowCircle2 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-cyan);
+  bottom: 10%;
+  left: 0%;
+  animation-delay: 5s;
+}
+
+.glowCircle3 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-purple);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: var(--accent-blue);
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.scrollArrow {
+  display: block;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .ctaContainer {
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaButton,
+  .ctaButtonSecondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .glowCircle1,
+  .glowCircle2,
+  .glowCircle3 {
+    filter: blur(60px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .ctaButton,
+  .ctaButtonSecondary {
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .scrollIndicator {
+    bottom: 1rem;
+  }
+}
+
