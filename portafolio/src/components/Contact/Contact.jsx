@@ -118,9 +118,8 @@ const Contact = () => {
     },
     hover: {
       scale: 1.1,
-      y: -5,
       transition: {
-        duration: 0.3,
+        duration: 0.1,
       },
     },
   };
@@ -176,7 +175,7 @@ const Contact = () => {
                         whileHover="hover"
                         initial="hidden"
                         animate={isInView ? 'visible' : 'hidden'}
-                        style={{ transitionDelay: `${index * 0.1}s` }}
+                        // style={{ transitionDelay: `${index * 0.1}s` }}
                         aria-label={`Visit my ${social.name} profile`}
                       >
                         <IconComponent

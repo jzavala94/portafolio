@@ -168,23 +168,6 @@ const Projects = () => {
                 </div>
               </motion.div>
             ))}
-
-            {/* Contact Info */}
-            <motion.div
-              className={styles.contactInfo}
-              variants={itemVariants}
-            >
-              <div className={styles.infoCard}>
-                <h3 className={styles.infoTitle}>Let's Connect</h3>
-                <p className={styles.infoDescription}>
-                  I'm always open to discussing new projects, creative ideas, or
-                  opportunities to be part of your vision. Feel free to reach out
-                  through the form or social media.
-                </p>
-
-                
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       </div>
