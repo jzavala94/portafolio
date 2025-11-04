@@ -62,7 +62,7 @@ const About = () => {
           >
             <h2 className={styles.title}>
               <span className={styles.titleNumber}>01.</span>
-              <span className={styles.titleText}>About Me</span>
+              <span className={styles.titleText}>Sobre mí</span>
             </h2>
             <div className={styles.titleLine}></div>
           </motion.div>
@@ -76,20 +76,19 @@ const About = () => {
             >
               <div className={styles.textCard}>
                 <p className={styles.intro}>
-                  Hello! I'm a passionate full-stack developer with a love for creating
-                  beautiful, functional, and user-friendly applications. I specialize in
-                  modern web technologies and enjoy turning complex problems into simple,
-                  elegant solutions.
+                Desarrollador de Software con más de 9 años de experiencia creando soluciones escalables y seguras.
+                Me especializo en backend y desarrollo full stack, trabajando con diferentes tecnologías y frameworks.
+                
                 </p>
                 <p className={styles.description}>
-                  My journey in web development started with a curiosity about how things
-                  work on the internet. Over time, I've developed expertise in building
-                  scalable applications using React, Node.js, and cloud technologies.
+                Apasionado por la optimización, la automatización y el uso de IA aplicada para mejorar la productividad y el rendimiento de las aplicaciones.
                 </p>
                 <p className={styles.description}>
-                  When I'm not coding, you can find me exploring new technologies,
-                  contributing to open-source projects, or sharing knowledge with the
-                  developer community.
+                Actualmente colaboro en proyectos cloud-native, integrando inteligencia artificial aplicada y automatización para potenciar la productividad y la calidad del software. 
+                Busco oportunidades como Backend Developer, Full Stack Developer o Software Engineer, en entornos cloud-native y DevOps.
+                {/* Busco seguir creciendo en entornos que valoren la innovación, la excelencia técnica y la colaboración. */}
+                
+
                 </p>
               </div>
             </motion.div>

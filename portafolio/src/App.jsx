@@ -70,8 +70,8 @@ function App() {
         <div className="footer-content">
           <p className="footer-text">
             Designed & Built with React
-            <span className="footer-heart" aria-label="love"> ❤️ </span>
-            by Your Name
+            <span className="footer-heart" aria-label="rocket"> 🚀 </span>
+            by JZ
           </p>
           <p className="footer-copyright">
             © {new Date().getFullYear()} All rights reserved.

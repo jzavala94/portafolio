@@ -56,23 +56,23 @@ const Contact = () => {
   // Social links - replace with your actual links
   const socialLinks = [
     {
-      name: 'GitHub',
-      icon: FiGithub,
-      url: 'https://github.com/yourusername',
-      color: '#181717',
-    },
-    {
       name: 'LinkedIn',
       icon: FiLinkedin,
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://www.linkedin.com/in/jorge-z-7a121a194/',
       color: '#0077B5',
     },
     {
       name: 'Email',
       icon: FiMail,
-      url: 'mailto:your.email@example.com',
+      url: 'mailto:jorgeorge94@gmail.com',
       color: '#EA4335',
     },
+    {
+      name: 'GitHub',
+      icon: FiGithub,
+      url: 'https://github.com/jzavala94',
+      color: '#999999ff',
+    }
   ];
 
 
@@ -134,7 +134,7 @@ const Contact = () => {
           >
             <h2 className={styles.title}>
               <span className={styles.titleNumber}>04.</span>
-              <span className={styles.titleText}>Get In Touch</span>
+              <span className={styles.titleText}>Ponte en contacto</span>
             </h2>
             <div className={styles.titleLine}></div>
           </motion.div>
@@ -147,11 +147,9 @@ const Contact = () => {
               variants={itemVariants}
             >
               <div className={styles.infoCard}>
-                <h3 className={styles.infoTitle}>Let's Connect</h3>
+                <h3 className={styles.infoTitle}>Conectemos</h3>
                 <p className={styles.infoDescription}>
-                  I'm always open to discussing new projects, creative ideas, or
-                  opportunities to be part of your vision. Feel free to reach out
-                  through the form or social media.
+                  Siempre estoy abierto a conversar sobre nuevos proyectos, ideas creativas u oportunidades para ser parte de tu visión. No dudes en contactarme.
                 </p>
 
                 {/* Social Links */}
@@ -213,4 +211,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 

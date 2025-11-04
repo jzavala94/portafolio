@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import {
@@ -36,16 +36,20 @@ import {
   SiSublimetext,
   SiSocketdotio,
   SiPostman,
+  SiGooglegemini,
   SiJirasoftware,
   SiSlack,
   SiDiscord,
 } from 'react-icons/si';
-import { BsMicrosoft } from 'react-icons/bs';
-import { FaAws } from "react-icons/fa";
-import { DiVisualstudio } from "react-icons/di";
-import { TbSettingsAutomation, TbApi, TbWebhook } from "react-icons/tb";
+import { BsMicrosoft, BsFillKanbanFill } from 'react-icons/bs';
+import { FaAws, FaTrello, FaDatabase, FaCubes, FaLock } from "react-icons/fa";
+import { DiVisualstudio, DiScrum } from "react-icons/di";
+import { TbSettingsAutomation, TbLockCog, TbWebhook } from "react-icons/tb";
 import { LuFileJson } from "react-icons/lu";
-
+import { GiDolphin } from "react-icons/gi";
+import { RiExchangeLine } from "react-icons/ri";
+import { GoCopilot } from "react-icons/go";
+import { IoCube } from "react-icons/io5";
 
 import styles from './Skills.module.css';
 
@@ -74,11 +78,10 @@ const Skills = () => {
 
     // Frontend / UI
     { name: 'React', icon: SiReact, color: '#61DAFB', category: 'Frontend' },
-    { name: 'React Native', icon: SiReact, color: '#61DAFB', category: 'Frontend' },
     { name: 'Expo', icon: SiExpo, color: '#999999ff', category: 'Frontend' },
     { name: 'Bootstrap', icon: SiBootstrap, color: '#7952B3', category: 'Frontend' },
     { name: 'jQuery', icon: SiJquery, color: '#0769AD', category: 'Frontend' },
-    { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', category: 'Frontend' },
+    { name: 'JavaScript', icon: SiJavascript, color: '#e5b701cc', category: 'Frontend' },
     { name: 'HTML5', icon: SiHtml5, color: '#E34F26', category: 'Frontend' },
     { name: 'CSS3', icon: SiCss3, color: '#1572B6', category: 'Frontend' },
 
@@ -99,28 +102,30 @@ const Skills = () => {
     { name: 'Nginx', icon: SiNginx, color: '#009639', category: 'Cloud/DevOps' },
 
     // Arquitectura / Protocolos
-    { name: 'RESTful', icon: TbApi, category: 'Integraciones y Protocolos' },
-    { name: 'WebSockets', icon: SiSocketdotio, category: 'Integraciones y Protocolos' },
-    { name: 'SOAP', icon: TbApi, category: 'Integraciones y Protocolos' },
-    { name: 'Webhooks', icon: TbWebhook, category: 'Integraciones y Protocolos' },
-    { name: 'JSON / XML', icon: LuFileJson, category: 'Integraciones y Protocolos' },
+    { name: 'RESTful', icon: RiExchangeLine, color: '#999999ff', category: 'Integraciones y Protocolos' },
+    { name: 'WebSockets', icon: SiSocketdotio, color: '#999999ff', category: 'Integraciones y Protocolos' },
+    { name: 'SOAP', icon: FaCubes, color: '#999999ff', category: 'Integraciones y Protocolos' },
+    { name: 'Webhooks', icon: TbWebhook, color: '#999999ff', category: 'Integraciones y Protocolos' },
+    { name: 'JSON / XML', icon: LuFileJson, color: '#999999ff', category: 'Integraciones y Protocolos' },
+    { name: 'JWT', icon: TbLockCog, color: '#999999ff', category: 'Integraciones y Protocolos' },
 
     // IA Aplicada y Productividad
-    { name: 'Cursor', category: 'IA y Productividad' },
-    { name: 'GitHub Copilot', icon: SiGithub, color: '#181717', category: 'IA y Productividad' },
-    { name: 'Gemini Code Assist', category: 'IA y Productividad' },
+    { name: 'Cursor', icon: IoCube, color: '#747272ff', category: 'IA y Productividad' },
+    { name: 'GitHub Copilot', icon: GoCopilot, color: '#5865F2', category: 'IA y Productividad' },
+    { name: 'Gemini Code Assist', icon: SiGooglegemini, color: '#2496ED', category: 'IA y Productividad' },
 
     // Metodologías Ágiles
-    { name: 'Scrum', category: 'Metodologías' },
-    { name: 'Kanban', category: 'Metodologías' },
+    { name: 'Scrum', icon: DiScrum, color: '#0052CC', category: 'Metodologías' },
+    { name: 'Kanban', icon: BsFillKanbanFill, color: '#e5b701cc', category: 'Metodologías' },
 
     // Herramientas / IDEs / Colaboración
     { name: 'Visual Studio Code', icon: DiVisualstudio, color: '#007ACC', category: 'Herramientas' },
     { name: 'Sublime Text', icon: SiSublimetext, color: '#FF9800', category: 'Herramientas' },
     { name: 'Postman', icon: SiPostman, color: '#FF6C37', category: 'Herramientas' },
-    { name: 'HeidiSQL', category: 'Herramientas' },
-    { name: 'SQLyog', category: 'Herramientas' },
+    { name: 'HeidiSQL', icon: FaDatabase, color: '#009639', category: 'Herramientas' },
+    { name: 'SQLyog', icon: GiDolphin, color: '#007ACC', category: 'Herramientas' },
     { name: 'Jira', icon: SiJirasoftware, color: '#0052CC', category: 'Herramientas' },
+    { name: 'Trello', icon: FaTrello, color: '#0052CC', category: 'Herramientas' },
     { name: 'Teams', icon: BsMicrosoft, color: '#6264A7', category: 'Herramientas' },
     { name: 'Slack', icon: SiSlack, color: '#4A154B', category: 'Herramientas' },
     { name: 'Discord', icon: SiDiscord, color: '#5865F2', category: 'Herramientas' },
@@ -210,7 +215,7 @@ const Skills = () => {
           >
             <h2 className={styles.title}>
               <span className={styles.titleNumber}>03.</span>
-              <span className={styles.titleText}>Skills & Technologies</span>
+              <span className={styles.titleText}>Mi Stack Tecnológico</span>
             </h2>
             <div className={styles.titleLine}></div>
           </motion.div>
@@ -266,7 +271,7 @@ const Skills = () => {
             className={styles.info}
             variants={itemVariants}
           >
-            Always learning and exploring new technologies to build better solutions.
+            Siempre aprendiendo y explorando nuevas tecnologías para crear mejores soluciones.
           </motion.p>
         </motion.div>
       </div>

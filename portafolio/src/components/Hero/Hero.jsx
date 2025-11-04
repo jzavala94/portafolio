@@ -89,7 +89,10 @@ const Hero = () => {
             className={styles.greeting}
             variants={itemVariants}
           >
-            <span className={styles.greetingText}>Hello, I'm</span>
+            <span className={styles.greetingText}>
+              Hola, soy
+              {/* Hello, I'm */}
+            </span>
           </motion.div>
 
           {/* Name */}
@@ -107,10 +110,12 @@ const Hero = () => {
             className={styles.tagline}
             variants={itemVariants}
           >
-            Crafting digital experiences with modern technologies
+            {/* Crafting digital experiences with modern technologies */}
+            Con más de 9 años de experiencia, creando soluciones digitales con tecnologías modernas.
             <br />
             <span className={styles.taglineAccent}>
-              Building the future, one line of code at a time.
+            {/* Construyendo el futuro, una línea de código a la vez. */}
+              {/* Building the future, one line of code at a time. */}
             </span>
           </motion.p>
 
@@ -119,8 +124,9 @@ const Hero = () => {
             className={styles.description}
             variants={itemVariants}
           >
-            I'm a passionate developer specializing in React, Node.js, and cloud technologies.
-            I transform ideas into elegant, scalable solutions.
+            {/* I'm a passionate developer specializing in React, Node.js, and cloud technologies.
+            I transform ideas into elegant, scalable solutions. */}
+            Construyendo el futuro, una línea de código a la vez.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -137,7 +143,7 @@ const Hero = () => {
               whileTap="tap"
               aria-label="Get in touch"
             >
-              Get In Touch
+              Contáctame
             </motion.a>
             <motion.a
               href="#projects"
@@ -160,7 +166,7 @@ const Hero = () => {
               whileTap="tap"
               aria-label="View my projects"
             >
-              View Projects
+              Ver proyectos
             </motion.a>
           </motion.div>
         </motion.div>

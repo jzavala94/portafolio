@@ -39,11 +39,11 @@ const Header = () => {
 
   // Navigation items
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: 'Inicio' },
+    { id: 'about', label: 'Sobre mí' },
+    { id: 'projects', label: 'Proyectos' },
+    { id: 'skills', label: 'Stack' },
+    { id: 'contact', label: 'Contacto' },
   ];
 
   return (
@@ -131,4 +131,5 @@ const Header = () => {
 };
 
 export default Header;
+
 

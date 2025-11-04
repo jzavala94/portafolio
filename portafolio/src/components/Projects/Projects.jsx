@@ -16,51 +16,61 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
+      title: 'AppNutria',
+      description: 'Desarrollo de plataforma web y móvil para nutriólogos (seguimiento clínico, citas, dietas).',
+      technologies: ['React', 'Expo', 'Python', 'FastAPI', 'PostgreSQL', 'Stripe', 'AWS', 'CI/CD', 'GitHub', 'Websockets', 'Kanban', 'JWT'],
       images: [
         'https://picsum.photos/seed/ecommerce1/800/520',
         'https://picsum.photos/seed/ecommerce2/800/520',
         'https://picsum.photos/seed/ecommerce3/800/520',
       ],
-      githubUrl: 'https://github.com/yourusername/ecommerce-platform',
-      demoUrl: 'https://your-demo-url.com',
+      // githubUrl: 'https://github.com/yourusername/ecommerce-platform',
+      demoUrl: 'https://appnutria.com/',
       featured: false,
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      technologies: ['React', 'TypeScript', 'Firebase', 'TailwindCSS'],
+      title: 'Bismo',
+      description: 'Desarrollo de software inmobiliario basado en microservicios para gestión de bienes y propiedades.',
+      technologies: ['MySQL', 'JavaScript', 'Jquery', 'HTML', 'CI/CD', 'Bootstrap', 'AWS', 'Python', 'Flask', 'Nginx', 'Docker', 'SOAP', 'Restful', 'PHP'],
       images: [
         'https://picsum.photos/seed/tasks1/800/520',
         'https://picsum.photos/seed/tasks2/800/520',
       ],
-      githubUrl: 'https://github.com/yourusername/task-manager',
-      demoUrl: 'https://your-demo-url.com',
+      // githubUrl: 'https://github.com/yourusername/task-manager',
+      demoUrl: 'https://bismo.com.mx/',
       featured: false,
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
-      technologies: ['React', 'OpenWeather API', 'Chart.js', 'CSS Modules'],
+      title: 'Sistema para talleres',
+      description: 'Desarrollo de una aplicación de escritorio enfocada en la gestión integral de talleres de reparación de dispositivos electrónicos, facilitando el seguimiento de servicios.',
+      technologies: ['Tauri', 'React', 'Vite', 'FastAPI', 'SQLite', 'CSS', 'JSON', 'Cursor'],
       images: [
         'https://picsum.photos/seed/weather1/800/520',
       ],
-      githubUrl: 'https://github.com/yourusername/weather-dashboard',
-      demoUrl: 'https://your-demo-url.com',
+      // githubUrl: 'https://github.com/yourusername/weather-dashboard',
+      demoUrl: 'https://www.youtube.com/@Serbeesoft',
       featured: false,
     },
     {
       id: 4,
-      title: 'Social Media Analytics',
-      description: 'Analytics dashboard for social media metrics with real-time data visualization and comprehensive reporting tools.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'D3.js'],
+      title: 'Sistema para rifas',
+      description: 'Desarrollo de plataforma de sorteos con gestión de boletos, ventas, validación de tickets, referidos, y una interfaz responsiva y autoadministrable.',
+      technologies: ['Node.js', 'Express', 'MongoDB', 'GitHub Copilot', 'Bootstrap'],
       images: [],
-      githubUrl: 'https://github.com/yourusername/social-analytics',
-      demoUrl: 'https://your-demo-url.com',
+      githubUrl: 'https://github.com/yourusername/weather-dashboard',
+      demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
+      featured: false,
+    },
+    {
+      id: 5,
+      title: 'Sistema para mobiliario',
+      description: 'Plataforma para gestión de rentas de diversos artículos. Integración a Paypal para suscripciones.',
+      technologies: ['React', 'Node.js', 'Express', 'MariaDB', 'Gemini Code', 'Paypal', 'Webhooks'],
+      images: [],
+      githubUrl: 'https://github.com/yourusername/weather-dashboard',
+      demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
       featured: false,
     },
   ];
@@ -233,7 +243,7 @@ const Projects = () => {
           >
             <h2 className={styles.title}>
               <span className={styles.titleNumber}>02.</span>
-              <span className={styles.titleText}>Projects</span>
+              <span className={styles.titleText}>Proyectos</span>
             </h2>
             <div className={styles.titleLine}></div>
           </motion.div>
@@ -257,4 +267,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
