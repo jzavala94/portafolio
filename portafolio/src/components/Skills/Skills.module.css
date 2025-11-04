@@ -145,7 +145,7 @@
   height: 60px;
   background: var(--icon-color);
   border-radius: 50%;
-  filter: blur(20px);
+  filter: blur(51px);
   opacity: 0.3;
   transition: all var(--transition-normal);
   z-index: -1;

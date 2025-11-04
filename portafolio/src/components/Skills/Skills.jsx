@@ -20,8 +20,35 @@ import {
   SiNextdotjs,
   SiVite,
   SiGraphql,
+  SiFlask,
+  SiFastapi,
+  SiDjango,
+  SiPhp,
+  SiLaravel,
+  SiExpo,
+  SiBootstrap,
+  SiJquery,
+  SiMysql,
+  SiMariadb,
+  SiSqlite,
+  SiRedis,
+  SiNginx,
+  SiSublimetext,
+  SiSocketdotio,
+  SiPostman,
+  SiJirasoftware,
+  SiSlack,
+  SiDiscord,
 } from 'react-icons/si';
+import { BsMicrosoft } from 'react-icons/bs';
+import { FaAws } from "react-icons/fa";
+import { DiVisualstudio } from "react-icons/di";
+import { TbSettingsAutomation, TbApi, TbWebhook } from "react-icons/tb";
+import { LuFileJson } from "react-icons/lu";
+
+
 import styles from './Skills.module.css';
+
 
 /**
  * Skills Component
@@ -32,26 +59,71 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   // Skills data with icons and categories
+  // Skills data with icons and categories
+  // Mapped from the user's provided lists into more granular categories.
   const skills = [
-    { name: 'React', icon: SiReact, color: '#61DAFB', category: 'Frontend' },
-    { name: 'Next.js', icon: SiNextdotjs, color: '#000000', category: 'Frontend' },
-    { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', category: 'Frontend' },
-    { name: 'TypeScript', icon: SiTypescript, color: '#3178C6', category: 'Frontend' },
+    // Backend / Frameworks
+    { name: 'Python', icon: SiPython, color: '#3776AB', category: 'Backend' },
+    { name: 'Flask', icon: SiFlask, color: '#999999ff', category: 'Backend' },
+    { name: 'FastAPI', icon: SiFastapi, color: '#009688', category: 'Backend' },
+    { name: 'Django', icon: SiDjango, color: '#146747ff', category: 'Backend' },
     { name: 'Node.js', icon: SiNodedotjs, color: '#339933', category: 'Backend' },
-    { name: 'Express', icon: SiExpress, color: '#000000', category: 'Backend' },
-    { name: 'MongoDB', icon: SiMongodb, color: '#47A248', category: 'Backend' },
-    { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1', category: 'Backend' },
-    { name: 'Docker', icon: SiDocker, color: '#2496ED', category: 'Herramientas' },
-    { name: 'Git', icon: SiGit, color: '#F05032', category: 'Herramientas' },
-    { name: 'GitHub', icon: SiGithub, color: '#181717', category: 'Herramientas' },
-    { name: 'TailwindCSS', icon: SiTailwindcss, color: '#38B2AC', category: 'Frontend' },
+    { name: 'Express', icon: SiExpress, color: '#999999ff', category: 'Backend' },
+    { name: 'PHP', icon: SiPhp, color: '#777BB4', category: 'Backend' },
+    { name: 'Laravel', icon: SiLaravel, color: '#FF2D20', category: 'Backend' },
+
+    // Frontend / UI
+    { name: 'React', icon: SiReact, color: '#61DAFB', category: 'Frontend' },
+    { name: 'React Native', icon: SiReact, color: '#61DAFB', category: 'Frontend' },
+    { name: 'Expo', icon: SiExpo, color: '#999999ff', category: 'Frontend' },
+    { name: 'Bootstrap', icon: SiBootstrap, color: '#7952B3', category: 'Frontend' },
+    { name: 'jQuery', icon: SiJquery, color: '#0769AD', category: 'Frontend' },
+    { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', category: 'Frontend' },
     { name: 'HTML5', icon: SiHtml5, color: '#E34F26', category: 'Frontend' },
     { name: 'CSS3', icon: SiCss3, color: '#1572B6', category: 'Frontend' },
-    { name: 'Python', icon: SiPython, color: '#3776AB', category: 'Backend' },
-    { name: 'Firebase', icon: SiFirebase, color: '#FFCA28', category: 'Backend' },
-    { name: 'Vite', icon: SiVite, color: '#646CFF', category: 'Herramientas' },
-    // Aprendiendo
-    { name: 'GraphQL', icon: SiGraphql, color: '#E10098', category: 'Aprendiendo' },
+
+    // Bases de datos
+    { name: 'MySQL', icon: SiMysql, color: '#4479A1', category: 'Bases de datos' },
+    { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1', category: 'Bases de datos' },
+    { name: 'MariaDB', icon: SiMariadb, color: '#003545', category: 'Bases de datos' },
+    { name: 'SQLite', icon: SiSqlite, color: '#003B57', category: 'Bases de datos' },
+    { name: 'MongoDB', icon: SiMongodb, color: '#47A248', category: 'Bases de datos' },
+    { name: 'Redis', icon: SiRedis, color: '#DC382D', category: 'Bases de datos' },
+
+    // Cloud/DevOps
+    { name: 'AWS', icon: FaAws, color: '#999999ff', category: 'Cloud/DevOps' },
+    { name: 'Docker', icon: SiDocker, color: '#2496ED', category: 'Cloud/DevOps' },
+    { name: 'Git', icon: SiGit, color: '#F05032', category: 'Cloud/DevOps' },
+    { name: 'GitHub', icon: SiGithub, color: '#999999ff', category: 'Cloud/DevOps' },
+    { name: 'CI/CD', icon: TbSettingsAutomation, color: '#999999ff', category: 'Cloud/DevOps' },
+    { name: 'Nginx', icon: SiNginx, color: '#009639', category: 'Cloud/DevOps' },
+
+    // Arquitectura / Protocolos
+    { name: 'RESTful', icon: TbApi, category: 'Integraciones y Protocolos' },
+    { name: 'WebSockets', icon: SiSocketdotio, category: 'Integraciones y Protocolos' },
+    { name: 'SOAP', icon: TbApi, category: 'Integraciones y Protocolos' },
+    { name: 'Webhooks', icon: TbWebhook, category: 'Integraciones y Protocolos' },
+    { name: 'JSON / XML', icon: LuFileJson, category: 'Integraciones y Protocolos' },
+
+    // IA Aplicada y Productividad
+    { name: 'Cursor', category: 'IA y Productividad' },
+    { name: 'GitHub Copilot', icon: SiGithub, color: '#181717', category: 'IA y Productividad' },
+    { name: 'Gemini Code Assist', category: 'IA y Productividad' },
+
+    // Metodologías Ágiles
+    { name: 'Scrum', category: 'Metodologías' },
+    { name: 'Kanban', category: 'Metodologías' },
+
+    // Herramientas / IDEs / Colaboración
+    { name: 'Visual Studio Code', icon: DiVisualstudio, color: '#007ACC', category: 'Herramientas' },
+    { name: 'Sublime Text', icon: SiSublimetext, color: '#FF9800', category: 'Herramientas' },
+    { name: 'Postman', icon: SiPostman, color: '#FF6C37', category: 'Herramientas' },
+    { name: 'HeidiSQL', category: 'Herramientas' },
+    { name: 'SQLyog', category: 'Herramientas' },
+    { name: 'Jira', icon: SiJirasoftware, color: '#0052CC', category: 'Herramientas' },
+    { name: 'Teams', icon: BsMicrosoft, color: '#6264A7', category: 'Herramientas' },
+    { name: 'Slack', icon: SiSlack, color: '#4A154B', category: 'Herramientas' },
+    { name: 'Discord', icon: SiDiscord, color: '#5865F2', category: 'Herramientas' },
   ];
 
   // Animation variants
@@ -107,8 +179,20 @@ const Skills = () => {
     return acc;
   }, {});
 
-  // Desired display order
-  const categoriesOrder = ['Frontend', 'Backend', 'Herramientas', 'Aprendiendo'];
+  // Desired display order (expanded to match user's requested sections)
+  const categoriesOrder = [
+    'Backend',
+    'Frontend',
+    'Bases de datos',
+    'Cloud/DevOps',
+    'Integraciones y Protocolos',
+    'IA y Productividad',
+    'Metodologías',
+    'Herramientas',
+    'Aprendiendo',
+  ];
+
+  // (categories rendered statically; no collapsible state)
 
   return (
     <section id="skills" className={styles.skills} ref={ref}>
@@ -141,27 +225,37 @@ const Skills = () => {
 
                 <motion.div className={styles.skillsGrid} variants={containerVariants}>
                   {groupedSkills[category].map((skill) => {
-                    const IconComponent = skill.icon;
-                    return (
-                      <motion.div
-                        key={skill.name}
-                        className={styles.skillCard}
-                        variants={skillCardVariants}
-                        whileHover="hover"
-                        initial="hidden"
-                        animate={isInView ? 'visible' : 'hidden'}
-                      >
-                        <div className={styles.skillIcon}>
-                          <IconComponent size={48} color={skill.color} aria-hidden="true" />
-                          <div
-                            className={styles.iconGlow}
-                            style={{ '--icon-color': skill.color }}
-                          ></div>
-                        </div>
-                        <span className={styles.skillName}>{skill.name}</span>
-                      </motion.div>
-                    );
-                  })}
+                      const IconComponent = skill.icon;
+                      const initials = skill.name
+                        .split(' ')
+                        .map((n) => n[0])
+                        .slice(0, 2)
+                        .join('');
+
+                      return (
+                        <motion.div
+                          key={skill.name}
+                          className={styles.skillCard}
+                          variants={skillCardVariants}
+                          whileHover="hover"
+                          initial="hidden"
+                          animate={isInView ? 'visible' : 'hidden'}
+                        >
+                          <div className={styles.skillIcon}>
+                            {IconComponent ? (
+                              <IconComponent size={48} color={skill.color} aria-hidden="true" />
+                            ) : (
+                              <div className={styles.skillFallback} aria-hidden="true">{initials}</div>
+                            )}
+                            <div
+                              className={styles.iconGlow}
+                              style={{ '--icon-color': skill.color || 'var(--accent-blue)' }}
+                            ></div>
+                          </div>
+                          <span className={styles.skillName}>{skill.name}</span>
+                        </motion.div>
+                      );
+                    })}
                 </motion.div>
               </div>
             ) : null
