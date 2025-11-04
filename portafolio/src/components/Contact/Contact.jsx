@@ -68,7 +68,7 @@ const Contact = () => {
       color: '#EA4335',
     },
     {
-      name: 'GitHub',
+      name: 'GitHub (Si me vez vacio, soy privado)',
       icon: FiGithub,
       url: 'https://github.com/jzavala94',
       color: '#999999ff',
