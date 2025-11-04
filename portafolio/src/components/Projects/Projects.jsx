@@ -59,8 +59,8 @@ const Projects = () => {
       description: 'Desarrollo de plataforma de sorteos con gestión de boletos, ventas, validación de tickets, referidos, y una interfaz responsiva y autoadministrable.',
       technologies: ['Node.js', 'Express', 'MongoDB', 'GitHub Copilot', 'Bootstrap'],
       images: [],
-      githubUrl: 'https://github.com/yourusername/weather-dashboard',
-      demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
+      // githubUrl: 'https://github.com/yourusername/weather-dashboard',
+      // demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
       featured: false,
     },
     {
@@ -69,8 +69,8 @@ const Projects = () => {
       description: 'Plataforma para gestión de rentas de diversos artículos. Integración a Paypal para suscripciones.',
       technologies: ['React', 'Node.js', 'Express', 'MariaDB', 'Gemini Code', 'Paypal', 'Webhooks'],
       images: [],
-      githubUrl: 'https://github.com/yourusername/weather-dashboard',
-      demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
+      // githubUrl: 'https://github.com/yourusername/weather-dashboard',
+      // demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
       featured: false,
     },
   ];
@@ -172,9 +172,40 @@ const Projects = () => {
               }
             </>
           ) : (
-            <div className={styles.imagePlaceholder}>
-              <div className={styles.placeholderInner}>No images</div>
-            </div>
+            <>
+              <div className={styles.imagePlaceholder}>
+                <div className={styles.placeholderInner}>No images</div>
+              </div>
+              <div className={styles.imageControls}>
+                <div className={styles.controlsLeft}>
+                  <div style={{ width: 72 }} />
+                </div>
+                <div className={styles.controlsRight}>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.projectLink}
+                      aria-label={`View ${project.title} on GitHub`}
+                    >
+                      <FiGithub aria-hidden="true" />
+                    </a>
+                  )}
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.projectLink}
+                      aria-label={`View ${project.title} demo`}
+                    >
+                      <FiExternalLink aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </>
           )}
         </div>
 
