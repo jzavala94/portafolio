@@ -87,10 +87,10 @@ const Skills = () => {
     },
     hover: {
       scale: 1.1,
-      rotate: 5,
-      y: -10,
+      // rotate: 5,
+      // y: -10,
       transition: {
-        duration: 0.3,
+        duration: 0.05,
         ease: 'easeOut',
       },
     },
@@ -132,7 +132,6 @@ const Skills = () => {
                   whileHover="hover"
                   initial="hidden"
                   animate={isInView ? 'visible' : 'hidden'}
-                  style={{ transitionDelay: `${index * 0.05}s` }}
                 >
                   <div className={styles.skillIcon}>
                     <IconComponent
