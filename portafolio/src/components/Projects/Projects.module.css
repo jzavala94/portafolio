@@ -97,6 +97,30 @@
 } */
 
 /* Project Header */
+.techBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  font-family: var(--font-mono);
+  transition: all var(--transition-normal);
+}
+
+.badge:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
+}
+
 .projectHeader {
   display: flex;
   justify-content: space-between;
@@ -175,6 +199,134 @@
   font-size: 0.95rem;
   margin: 0;
   flex: 1;
+}
+
+/* Image gallery / carousel styles */
+.imageWrapper {
+  margin: 0 1rem 1rem 1rem;
+  position: relative;
+}
+
+/* Single image view (show one image at a time) */
+.singleImage {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.singleImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imageGallery {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* hide native scrollbar */
+.imageGallery {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.imageGallery::-webkit-scrollbar {
+  display: none; /* Safari/WebKit */
+}
+
+.imageItem {
+  min-width: 200px;
+  height: 120px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  scroll-snap-align: center;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imagePlaceholder {
+  height: 120px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+  border: 1px dashed var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.galleryControls {
+  display: none; /* kept for legacy but hidden when using side arrows */
+}
+
+.galleryBtn {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.galleryBtn:hover {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+/* Side positioned arrow buttons */
+.imageControls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+/* Slightly larger buttons on desktop */
+@media (min-width: 768px) {
+  .galleryBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+  }
+}
+
+.controlsRight {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.controlsLeft {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 /* Project Technologies */
