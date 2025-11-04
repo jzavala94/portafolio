@@ -64,6 +64,9 @@ const Projects = () => {
       technologies: ['Node.js', 'Express', 'MongoDB', 'GitHub Copilot', 'Bootstrap'],
       images: [
         '/portafolio/src/assets/projects/rifas/image1.png',
+        '/portafolio/src/assets/projects/rifas/image2.png',
+        '/portafolio/src/assets/projects/rifas/image3.png',
+        '/portafolio/src/assets/projects/rifas/image4.png',
       ],
       // githubUrl: 'https://github.com/yourusername/weather-dashboard',
       // demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
@@ -76,7 +79,9 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Express', 'MariaDB', 'Gemini Code', 'Paypal', 'Webhooks'],
       images: [
         '/portafolio/src/assets/projects/mobiliario/image1.png',
-      ], 
+        '/portafolio/src/assets/projects/mobiliario/image2.png',
+        '/portafolio/src/assets/projects/mobiliario/image3.png',
+      ],
       // githubUrl: 'https://github.com/yourusername/weather-dashboard',
       // demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
       featured: false,

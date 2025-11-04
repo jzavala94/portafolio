@@ -66,15 +66,15 @@ const Skills = () => {
   // Skills data with icons and categories
   // Mapped from the user's provided lists into more granular categories.
   const skills = [
-    // Backend / Frameworks
-    { name: 'Python', icon: SiPython, color: '#3776AB', category: 'Backend' },
-    { name: 'Flask', icon: SiFlask, color: '#999999ff', category: 'Backend' },
-    { name: 'FastAPI', icon: SiFastapi, color: '#009688', category: 'Backend' },
-    { name: 'Django', icon: SiDjango, color: '#146747ff', category: 'Backend' },
-    { name: 'Node.js', icon: SiNodedotjs, color: '#339933', category: 'Backend' },
-    { name: 'Express', icon: SiExpress, color: '#999999ff', category: 'Backend' },
-    { name: 'PHP', icon: SiPhp, color: '#777BB4', category: 'Backend' },
-    { name: 'Laravel', icon: SiLaravel, color: '#FF2D20', category: 'Backend' },
+    // Backend / Frameworks / Frameworks
+    { name: 'Python', icon: SiPython, color: '#3776AB', category: 'Backend / Frameworks' },
+    { name: 'Flask', icon: SiFlask, color: '#999999ff', category: 'Backend / Frameworks' },
+    { name: 'FastAPI', icon: SiFastapi, color: '#009688', category: 'Backend / Frameworks' },
+    { name: 'Django', icon: SiDjango, color: '#146747ff', category: 'Backend / Frameworks' },
+    { name: 'Node.js', icon: SiNodedotjs, color: '#339933', category: 'Backend / Frameworks' },
+    { name: 'Express', icon: SiExpress, color: '#999999ff', category: 'Backend / Frameworks' },
+    { name: 'PHP', icon: SiPhp, color: '#777BB4', category: 'Backend / Frameworks' },
+    { name: 'Laravel', icon: SiLaravel, color: '#FF2D20', category: 'Backend / Frameworks' },
 
     // Frontend / UI
     { name: 'React', icon: SiReact, color: '#61DAFB', category: 'Frontend' },
@@ -91,23 +91,22 @@ const Skills = () => {
     { name: 'MariaDB', icon: SiMariadb, color: '#003545', category: 'Bases de datos' },
     { name: 'SQLite', icon: SiSqlite, color: '#003B57', category: 'Bases de datos' },
     { name: 'MongoDB', icon: SiMongodb, color: '#47A248', category: 'Bases de datos' },
-    { name: 'Redis', icon: SiRedis, color: '#DC382D', category: 'Bases de datos' },
 
-    // Cloud/DevOps
-    { name: 'AWS', icon: FaAws, color: '#999999ff', category: 'Cloud/DevOps' },
-    { name: 'Docker', icon: SiDocker, color: '#2496ED', category: 'Cloud/DevOps' },
-    { name: 'Git', icon: SiGit, color: '#F05032', category: 'Cloud/DevOps' },
-    { name: 'GitHub', icon: SiGithub, color: '#999999ff', category: 'Cloud/DevOps' },
-    { name: 'CI/CD', icon: TbSettingsAutomation, color: '#999999ff', category: 'Cloud/DevOps' },
-    { name: 'Nginx', icon: SiNginx, color: '#009639', category: 'Cloud/DevOps' },
+    // Cloud / DevOps
+    { name: 'AWS', icon: FaAws, color: '#999999ff', category: 'Cloud / DevOps' },
+    { name: 'Docker', icon: SiDocker, color: '#2496ED', category: 'Cloud / DevOps' },
+    { name: 'Git', icon: SiGit, color: '#F05032', category: 'Cloud / DevOps' },
+    { name: 'GitHub', icon: SiGithub, color: '#999999ff', category: 'Cloud / DevOps' },
+    { name: 'CI/CD', icon: TbSettingsAutomation, color: '#999999ff', category: 'Cloud / DevOps' },
+    { name: 'Nginx', icon: SiNginx, color: '#009639', category: 'Cloud / DevOps' },
 
     // Arquitectura / Protocolos
-    { name: 'RESTful', icon: RiExchangeLine, color: '#999999ff', category: 'Integraciones y Protocolos' },
-    { name: 'WebSockets', icon: SiSocketdotio, color: '#999999ff', category: 'Integraciones y Protocolos' },
-    { name: 'SOAP', icon: FaCubes, color: '#999999ff', category: 'Integraciones y Protocolos' },
-    { name: 'Webhooks', icon: TbWebhook, color: '#999999ff', category: 'Integraciones y Protocolos' },
-    { name: 'JSON / XML', icon: LuFileJson, color: '#999999ff', category: 'Integraciones y Protocolos' },
-    { name: 'JWT', icon: TbLockCog, color: '#999999ff', category: 'Integraciones y Protocolos' },
+    { name: 'RESTful', icon: RiExchangeLine, color: '#999999ff', category: 'Integraciones / Protocolos' },
+    { name: 'WebSockets', icon: SiSocketdotio, color: '#999999ff', category: 'Integraciones / Protocolos' },
+    { name: 'SOAP', icon: FaCubes, color: '#999999ff', category: 'Integraciones / Protocolos' },
+    { name: 'Webhooks', icon: TbWebhook, color: '#999999ff', category: 'Integraciones / Protocolos' },
+    { name: 'JSON / XML', icon: LuFileJson, color: '#999999ff', category: 'Integraciones / Protocolos' },
+    { name: 'JWT', icon: TbLockCog, color: '#999999ff', category: 'Integraciones / Protocolos' },
 
     // IA Aplicada y Productividad
     { name: 'Cursor', icon: IoCube, color: '#747272ff', category: 'IA y Productividad' },
@@ -186,11 +185,11 @@ const Skills = () => {
 
   // Desired display order (expanded to match user's requested sections)
   const categoriesOrder = [
-    'Backend',
+    'Backend / Frameworks',
     'Frontend',
     'Bases de datos',
-    'Cloud/DevOps',
-    'Integraciones y Protocolos',
+    'Cloud / DevOps',
+    'Integraciones / Protocolos',
     'IA y Productividad',
     'Metodologías',
     'Herramientas',
