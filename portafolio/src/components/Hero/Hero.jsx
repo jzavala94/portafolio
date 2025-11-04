@@ -166,26 +166,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className={styles.scrollIndicator}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
-      >
-        <motion.div
-          className={styles.scrollArrow}
-          animate={{ y: [0, 10, 0] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          aria-hidden="true"
-        >
-          ↓
-        </motion.div>
-      </motion.div>
+      
     </section>
   );
 };

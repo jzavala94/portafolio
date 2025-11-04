@@ -68,12 +68,6 @@ const Contact = () => {
       color: '#0077B5',
     },
     {
-      name: 'Twitter',
-      icon: FiTwitter,
-      url: 'https://twitter.com/yourusername',
-      color: '#1DA1F2',
-    },
-    {
       name: 'Email',
       icon: FiMail,
       url: 'mailto:your.email@example.com',
