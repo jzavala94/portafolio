@@ -133,7 +133,6 @@ const Projects = () => {
         variants={cardVariants}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
-        style={{ transitionDelay: `${index * 0.06}s` }}
       >
         <div className={styles.projectHeader}>
           <h3 className={styles.projectTitle}>{project.title}</h3>

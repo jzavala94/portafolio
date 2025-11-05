@@ -95,7 +95,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
 }
 
 .skillCard::before {
@@ -184,7 +184,7 @@
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
 }
 
 /* Responsive Design */
