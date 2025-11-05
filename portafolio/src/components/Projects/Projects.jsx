@@ -4,6 +4,45 @@ import { useRef, useState } from 'react';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import styles from './Projects.module.css';
 
+// Load images through Vite's asset pipeline so they get bundled and work on GitHub Pages
+// We import folders per project and sort by filename for stable ordering
+const loadImages = (glob) =>
+  Object.entries(glob)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([, url]) => url);
+
+// Note: paths are relative to this file
+const appnutriaImages = loadImages(
+  import.meta.glob('../../assets/projects/appnutria/*.{png,PNG,jpg,jpeg,webp,avif}', {
+    eager: true,
+    import: 'default',
+  })
+);
+const bismoImages = loadImages(
+  import.meta.glob('../../assets/projects/bismo/*.{png,PNG,jpg,jpeg,webp,avif}', {
+    eager: true,
+    import: 'default',
+  })
+);
+const talleresImages = loadImages(
+  import.meta.glob('../../assets/projects/talleres/*.{png,PNG,jpg,jpeg,webp,avif}', {
+    eager: true,
+    import: 'default',
+  })
+);
+const rifasImages = loadImages(
+  import.meta.glob('../../assets/projects/rifas/*.{png,PNG,jpg,jpeg,webp,avif}', {
+    eager: true,
+    import: 'default',
+  })
+);
+const mobiliarioImages = loadImages(
+  import.meta.glob('../../assets/projects/mobiliario/*.{png,PNG,jpg,jpeg,webp,avif}', {
+    eager: true,
+    import: 'default',
+  })
+);
+
 /**
  * Projects Component
  * Showcase projects with cards linking to GitHub or demos
@@ -19,16 +58,7 @@ const Projects = () => {
       title: 'AppNutria',
       description: 'Desarrollo de plataforma web y móvil para nutriólogos (seguimiento clínico, citas, dietas).',
       technologies: ['React', 'Expo', 'Python', 'FastAPI', 'PostgreSQL', 'Stripe', 'AWS', 'CI/CD', 'GitHub', 'Websockets', 'Kanban', 'JWT'],
-      images: [
-        '/portafolio/src/assets/projects/appnutria/image1.png',
-        './portafolio/src/assets/projects/appnutria/image2.png',
-        '../portafolio/src/assets/projects/appnutria/image3.png',
-        'portafolio/src/assets/projects/appnutria/image4.png',
-        '/portafolio/src/assets/projects/appnutria/image4.PNG',
-        './portafolio/src/assets/projects/appnutria/image5.PNG',
-        '../portafolio/src/assets/projects/appnutria/image5.PNG',
-        'portafolio/src/assets/projects/appnutria/image4.PNG',
-      ],
+      images: appnutriaImages,
       // githubUrl: 'https://github.com/yourusername/ecommerce-platform',
       demoUrl: 'https://appnutria.com/',
       featured: false,
@@ -38,11 +68,7 @@ const Projects = () => {
       title: 'Bismo',
       description: 'Desarrollo de software inmobiliario basado en microservicios para gestión de bienes y propiedades.',
       technologies: ['MySQL', 'JavaScript', 'Jquery', 'HTML', 'CI/CD', 'Bootstrap', 'AWS', 'Python', 'Flask', 'Nginx', 'Docker', 'SOAP', 'Restful', 'PHP'],
-      images: [
-        '/portafolio/src/assets/projects/bismo/image1.png',
-        '/portafolio/src/assets/projects/bismo/image2.png',
-        '/portafolio/src/assets/projects/bismo/image3.png',
-      ],
+      images: bismoImages,
       // githubUrl: 'https://github.com/yourusername/task-manager',
       demoUrl: 'https://bismo.com.mx/',
       featured: false,
@@ -52,11 +78,7 @@ const Projects = () => {
       title: 'Sistema para talleres',
       description: 'Desarrollo de una aplicación de escritorio enfocada en la gestión integral de talleres de reparación de dispositivos electrónicos, facilitando el seguimiento de servicios.',
       technologies: ['Tauri', 'React', 'Vite', 'FastAPI', 'SQLite', 'CSS', 'JSON', 'Cursor'],
-      images: [
-        '/portafolio/src/assets/projects/talleres/image1.png',
-        '/portafolio/src/assets/projects/talleres/image2.png',
-        '/portafolio/src/assets/projects/talleres/image3.png',
-      ],
+      images: talleresImages,
       // githubUrl: 'https://github.com/yourusername/weather-dashboard',
       demoUrl: 'https://www.youtube.com/@Serbeesoft',
       featured: false,
@@ -66,12 +88,7 @@ const Projects = () => {
       title: 'Sistema para rifas',
       description: 'Desarrollo de plataforma de sorteos con gestión de boletos, ventas, validación de tickets, referidos, y una interfaz responsiva y autoadministrable.',
       technologies: ['Node.js', 'Express', 'MongoDB', 'GitHub Copilot', 'Bootstrap'],
-      images: [
-        '/portafolio/src/assets/projects/rifas/image1.png',
-        '/portafolio/src/assets/projects/rifas/image2.png',
-        '/portafolio/src/assets/projects/rifas/image3.png',
-        '/portafolio/src/assets/projects/rifas/image4.png',
-      ],
+      images: rifasImages,
       // githubUrl: 'https://github.com/yourusername/weather-dashboard',
       // demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
       featured: false,
@@ -81,11 +98,7 @@ const Projects = () => {
       title: 'Sistema para mobiliario',
       description: 'Plataforma para gestión de rentas de diversos artículos. Integración a Paypal para suscripciones.',
       technologies: ['React', 'Node.js', 'Express', 'MariaDB', 'Gemini Code', 'Paypal', 'Webhooks'],
-      images: [
-        '/portafolio/src/assets/projects/mobiliario/image1.png',
-        '/portafolio/src/assets/projects/mobiliario/image2.png',
-        '/portafolio/src/assets/projects/mobiliario/image3.png',
-      ],
+      images: mobiliarioImages,
       // githubUrl: 'https://github.com/yourusername/weather-dashboard',
       // demoUrl: 'https://www.youtube.com/watch?v=GoQgWP5BNbg&t=20s',
       featured: false,
