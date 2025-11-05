@@ -139,7 +139,7 @@
   transform: scale(1.02);
 }
 
-.imageGlow {
+/* .imageGlow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -151,7 +151,7 @@
   filter: blur(60px);
   opacity: 0.3;
   animation: pulse 3s ease-in-out infinite;
-}
+} */
 
 @keyframes pulse {
   0%, 100% {
@@ -170,6 +170,16 @@
   color: var(--text-secondary);
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+/* Image inside placeholder */
+.imagePlaceholder img {
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .imageBorder {

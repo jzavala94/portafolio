@@ -13,31 +13,31 @@ const loadImages = (glob) =>
 
 // Note: paths are relative to this file
 const appnutriaImages = loadImages(
-  import.meta.glob('../../assets/projects/appnutria/*.{png,PNG,jpg,jpeg,webp,avif}', {
+  import.meta.glob('../../assets/projects/appnutria/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,avif,AVIF,svg,SVG}', {
     eager: true,
     import: 'default',
   })
 );
 const bismoImages = loadImages(
-  import.meta.glob('../../assets/projects/bismo/*.{png,PNG,jpg,jpeg,webp,avif}', {
+  import.meta.glob('../../assets/projects/bismo/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,avif,AVIF,svg,SVG}', {
     eager: true,
     import: 'default',
   })
 );
 const talleresImages = loadImages(
-  import.meta.glob('../../assets/projects/talleres/*.{png,PNG,jpg,jpeg,webp,avif}', {
+  import.meta.glob('../../assets/projects/talleres/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,avif,AVIF,svg,SVG}', {
     eager: true,
     import: 'default',
   })
 );
 const rifasImages = loadImages(
-  import.meta.glob('../../assets/projects/rifas/*.{png,PNG,jpg,jpeg,webp,avif}', {
+  import.meta.glob('../../assets/projects/rifas/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,avif,AVIF,svg,SVG}', {
     eager: true,
     import: 'default',
   })
 );
 const mobiliarioImages = loadImages(
-  import.meta.glob('../../assets/projects/mobiliario/*.{png,PNG,jpg,jpeg,webp,avif}', {
+  import.meta.glob('../../assets/projects/mobiliario/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,avif,AVIF,svg,SVG}', {
     eager: true,
     import: 'default',
   })
