@@ -58,7 +58,7 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       icon: FiLinkedin,
-      url: 'https://www.linkedin.com/in/jorge-z-7a121a194/',
+      url: 'https://www.linkedin.com/in/jzavala94/',
       color: '#0077B5',
     },
     {

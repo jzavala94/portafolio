@@ -22,19 +22,19 @@ const Header = () => {
 
   // Smooth scroll to section
   const handleNavClick = (e, targetId) => {
-    e.preventDefault();
-    const element = document.getElementById(targetId);
-    if (element) {
-      const offset = 80; // Account for fixed header height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+    if (e) e.preventDefault();
+    const doScroll = () => {
+      const el = document.getElementById(targetId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+    if (isMobileMenuOpen) {
+      // Close menu first, wait for its close animation to finish, then scroll
+      setIsMobileMenuOpen(false);
+      setTimeout(doScroll, 320); // matches transition duration ~0.3s
+    } else {
+      doScroll();
     }
-    setIsMobileMenuOpen(false); // Close mobile menu after navigation
   };
 
   // Navigation items
@@ -112,6 +112,7 @@ const Header = () => {
             opacity: isMobileMenuOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3 }}
+          style={{ pointerEvents: isMobileMenuOpen ? 'auto' : 'none' }}
         >
           {navItems.map((item) => (
             <li key={item.id}>
